@@ -1,0 +1,35 @@
+mkdir install_plumed_with_gnap
+cp GNAP.cpp ./install_plumed_with_gnap/GNAP.cpp
+cd install_plumed_with_gnap
+path_prefix=`pwd`
+
+
+
+mkdir openmpi
+cd openmpi
+mkdir utility1
+tar -zxvf ../../openmpi-*
+cd openmpi-*/
+./configure --prefix=${path_prefix}/openmpi/utility1
+make -j 8
+make install
+cd ../../
+
+
+mkdir plumed
+cd plumed
+mkdir utility1
+tar -zxvf ../../plumed-2.1.3.tgz
+cd plumed-2.1.3
+./configure --prefix=${path_prefix}/plumed/utility1   CC=${path_prefix}/openmpi/utility1/bin/mpicc CXX=${path_prefix}/openmpi/utility1/bin/mpic++ 
+make -j 8
+cp ../../GNAP.cpp  ./src/colvar/.
+./configure --prefix=${path_prefix}/plumed/utility1   CC=${path_prefix}/openmpi/utility1/bin/mpicc CXX=${path_prefix}/openmpi/utility1/bin/mpic++ 
+sed -i  's/-ansi/-std=c++11/g' Makefile.conf
+make -j 8
+make install
+cd ../../../
+
+
+
+

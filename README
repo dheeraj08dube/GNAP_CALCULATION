@@ -1,0 +1,92 @@
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+
+
+This folder contains the following:
+
+1)  tutorial_1    : This folder conatins all the required items for the GNAP calculation for the test system.
+                  In this folder, along with the test trajectory(1000frames.xtc) and the reference structure
+                  (ref1.gro), the other input files like PMATRIX1.dat , neighbourhood1.dat , population_neigh1.dat ,
+                  the plumed input script (plumed.dat) and a .sh shell-script named GNAP.sh are provided. The 
+                  details of all these files are provided in a README file provided inside the folder "tutorial_1".
+
+
+
+2)  tutorial_2    : In this folder, Only the test trajectory 1000frames.xtc and the reference structure start.pdb are
+                  provided. These two file can be replaced by any system's trajectory and reference structure for which
+                  GNAP needs to be calculated while care must be taken to replace the names of the same must be updated
+                  in the file "run.csh". Using Gromacs, start.pdb is used to generate the ref.pdb and ref.gro . Therefater,
+                  using xyz.py, ref.pdb is used to capture xyz coordinates into the file xyz.dat. Then, using xyz.dat into
+                  romega.cpp and pmat.c the other input files like PMATRIX1.dat ,neighbourhood1.dat & population_neigh1.dat
+                  are generated which are in-turn used as input in plumed input-script "plumed.dat". The 
+                  details of all these files are provided in a README file provided inside the folder "tutorial_2".
+
+
+3) GNAP.cpp       : This is actual GNAP code which is implemented into plumed.
+
+
+4) install_plumed :This is basically a bash script which installs the plumed-with-gnap. Command used : bash install_plumed
+                   This will create a folder named install_plumed_with_gnap.
+
+
+5) openmpi-1.8.8.tar.gz :This is the tar file for openmpi version used in our work "doi: https://doi.org/10.1101/840850"
+
+
+6) plumed-2.1.3.tgz :This is the tar file for plumed version used in our work "doi: https://doi.org/10.1101/840850"
+                          
+
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+############  NOTE  ###########
+############  NOTE  ###########
+############  NOTE  ###########
+############  NOTE  ###########
+############  NOTE  ###########
+
+For running the the two tutorials 1) tutorial_1  and  2) tutorial_2 , there is a README made available in these folders.
+
+############  NOTE  ###########
+############  NOTE  ###########
+############  NOTE  ###########
+############  NOTE  ###########
+############  NOTE  ###########
+
+
+
+
+
+
+
+
+

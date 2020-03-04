@@ -1,0 +1,70 @@
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+
+
+This folder 'Tutorial_1' (for trial with all the input files like PMATRIX1.dat , population_neigh1.dat , ref1.gro and neighborhood1.dat) contains the following : 
+
+1) 1000frames.xtc is a short test trajectory that has 1000 frames of GB1 protein system with 16 residues having a total of 136 particles. 
+
+2) GNAP.sh contains the plumed command ( '/plumed driver --mf_xtc 1000frames.xtc --plumed plumed.dat' ) to  run the plumed for generating GNAP values for the given test trajectory.
+
+3) neighbourhood1.dat contains line-by-line the particle ID's of the neighbourhood of the various particles.
+
+4) plumed.dat is a plumed input script for calculating GNAP value for the test trajectory.
+
+5) PMATRIX1.dat contains the projection matrix P (for all the particles) which projects out the non-affine component of the total displacement vector of all the particles' environment.
+
+6) population_neigh1.dat contains line-by-line the population of the neighbourhood of the various particles.
+
+7) ref1.gro is just the gro format file of the reference structure deleting the 1st two lines in the gro format-file.
+
+8) COLVAR.png is a png file that is the plot of the GNAP values that would be generatd for the given test system.
+
+The above files 3,5 and 6  are actually generated using pmat.c program which is made availabe in the folder named tutorial_2.
+
+
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+
+
+
+
+
+
+
+
+
+
+
+
+
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+
+Through the terminal run the bash script named "GNAP.sh"  using the command : bash GNAP.sh
+
+This will directly generate GNAP for the trajectory 1000frames.xtc  and save these values in file named 'COLVAR'.
+
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+
+
+
+
+
+
+

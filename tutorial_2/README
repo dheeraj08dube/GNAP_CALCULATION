@@ -1,0 +1,158 @@
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+
+
+This folder 'Tutorial_1' (for trial with all the input files like PMATRIX1.dat , population_neigh1.dat ,
+ref1.gro and neighborhood1.dat) contains the following : 
+
+1) 1000frames.xtc is a short test trajectory that has 1000 frames of GB1 protein system with 16 residues 
+    having a total of 136 particles. 
+
+2) myhead.h it stiores some important constants like in our case at hand 'NP' which the number of particles 
+   in the system we are dealing with. In the test system provided the NP = 136.
+
+3) plumed.dat is a plumed input script for calculating GNAP value for the test trajectory.
+
+4) pmat.c : this is a c-program that generates certain input files that would be required by the input script 
+   'plumed.dat'.
+
+5) romega.cpp : This is a c++ program that calculates the minimum radius Romega (writes it in file named 
+   Romega.dat) which will ensure a neighbourhood of 4 particle for all the particles in the protein. 
+   This is to ensure a non-zero non-affinity to be captured for all the particles in the protein.
+
+6) run.csh : this is a csh command which generates the necessary and required format files (ref.gro and ref.pdb later) 
+   for the reference structure file 'start.pdb', saves an xyz coordinated of the refrence structure in the xyz.dat file, 
+   runs the romega.cpp to generate the Romega value which is saved in Romega.dat file, runs the pmat.c program to generate 
+   the other necessary files (neighbourhood1.dat , population_neigh1.dat and PMATRIX1.dat) , calculates the GNAP vlues 
+   and finally moves all the files generated, by run.csh, except 'COLVAR' into a folder named 'DELETE' . 
+
+7) start.pdb : this is a pdb format file for reference structure wrt which GNAP is to be calulcated for the test 
+   trajectory '1000frames.xtc'
+
+8) xyz.py   : this .py program extrats the xyz coordiantes and pbc box size and saves into the file named 'xyz.dat' 
+
+9) COLVAR.png is a png file that is the plot of the GNAP values that would be generatd for the given test system.
+
+
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+
+
+a) run.csh : "Gromacs" is required to generate ref.gro and ref.pdb from start.pdb. 
+
+b) run.csh : "python" is required to extract the xyz coordinates and pbc-box from ref.pdb into a
+   file named "xyz.dat".
+
+c) pmat.c  : running this program requires "lapack" and "blas" packages to be installed in the system 
+   to perform  some linear algebraic operations involved in the calculation of the projection matrix P 
+   (for all the particles saved in PMATRIX.dat) which projects out the non-affine component of the total 
+   displacement vector of all the particles' environment. The other outputs of pmat.c include 
+   neighbourhood.dat and population_neigh1.dat. The command for compiling and this program are :
+   1) compiling : gcc pmat.c -Ddsyev=dsyev_ -lm -llapack -lblas         and 
+   2) running : ./a.out
+   
+d) run.csh : "Plumed" is required for the final calculation of GNAP from all the input files generated.
+   The command used in run.csh for running the plumed is :
+   1)../install_plumed_with_gnap/plumed/utility1/bin/plumed driver --mf_xtc 1000frames.xtc --plumed plumed.dat
+
+
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+#######  VARIOUS REQUIREMENTS  ########
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+
+1) Inside this folder named "tutorial_2", Make available the trajectory file for which the GNAP is to be 
+   calculated. As a test system a file by name "1000frames.xtc" is provided. Also provided the reference
+   structure in the .pdb format. The file named "start.pdb" is made available. The new trajectory file .xtc
+   and the new refernce structure file .pdb, for which GNAP needs to generated, having any other name should 
+   be updated in the files "run.csh" ,  "romega.cpp" and "pmat.c" .
+   
+2) Update the number of particles in two file 1) myhead.h and 2) plumed.dat , which for the given system
+   is 136. The line "#define NP 136" in myhead.h  and the line "GNAP LABEL=gnap ATOMS=1-136..." in the 
+   plumed input script "plumed.dat" needs to be updated.
+   
+3) Run the  csh file named "run.csh" using command :  csh run.csh 
+   This will directly carry out the 4 steps mentioned in the above section "VARIOUS REQUIREMENTS" and generate 
+   GNAP for the trajectory 1000frames.xtc  and save these values in file named 'COLVAR'.
+
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+###### ACTION REQUIRED #######
+
+
+
+
+
+
+

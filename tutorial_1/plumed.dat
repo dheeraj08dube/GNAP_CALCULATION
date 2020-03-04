@@ -1,0 +1,4 @@
+GNAP LABEL=gnap ATOMS=1-136 PM=PMATRIX1.dat  PI_NEIGHBOUR=neighbourhood1.dat NUM_NEIGHBOUR=population_neigh1.dat REFERENCE=ref1.gro
+ 
+ 
+PRINT  ARG=gnap FILE=COLVAR

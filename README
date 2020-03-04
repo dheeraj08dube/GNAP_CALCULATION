@@ -70,7 +70,7 @@ Step-3 : The step 3 requires some additional softwares to be install which inclu
          1000frames.xtc and start.pdb) in the file "run.csh" inside the folder "tutorial_2". Also, one needs to 
          update the no. of particles in the files "myhead.h" (line "#define NP 136") and "plumed.dat" ( line
          "GNAP LABEL=gnap ATOMS=1-136..."). For the test system, the number of particle is 136. There is a 
-         separate README file made available inside the folder "tutorial_1" which mentions and expalins all
+         separate README file made available inside the folder "tutorial_2" which mentions and expalins all
          the available files inside this folder and the necessary actions to be performed.
 
 

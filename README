@@ -1,20 +1,13 @@
 ######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-
-
-
 
 This folder contains the following:
 
 
-1) install_plumed_with_gnap :This is basically a Folder that contains all the files required for the installation of
-                            of plumed with GNAP incorporated as a new Collective Variable in it. The detailed theory
-                            of the same is available in the work by Dheeraj et al. doi: https://doi.org/10.1101/840850 .
-                            Inside this folder there is a bash script file called "install_plumed". One can directly 
-                            install plumed by running the command:  bash install_plumed  
+1) install        :This is basically a Folder that contains all the files required for the installation of
+                  of plumed with GNAP incorporated as a new Collective Variable in it. The detailed theory
+                  of the same is available in the work by Dheeraj et al. doi: https://doi.org/10.1101/840850 .
+                  Inside this folder there is a bash script file called "install_plumed". One can directly 
+                  install plumed by running the command:  bash install_plumed  
 
 
 
@@ -37,51 +30,19 @@ This folder contains the following:
 
 
 
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
-######  INPUT FILES CONTAINED IN TUTORIAL_1  ###########
- 
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-############  STEPS  ###########
-############  STEPS  ###########
-############  STEPS  ###########
-############  STEPS  ###########
-############  STEPS  ###########
-
-
-
+############  GETTING STARTED  ###########
 
 STEP-1 : The first step that one needs to perform is to Install the plumed. Along with a plumed version one would
          also require a suitable and compatible openmpi version for the successful inatallation of plumed. Tar-file
          for the suitable version of both these (openmpi-1.8.8.tar.gz  and plumed-2.1.3.tgz) are made available in
-         this current folder. The bash script "install_plumed" needs to be run in order to install the plumed
-         successfully. This will create a folder named install_plumed_with_gnap.
-         The command used would be simply : bash install_plumed  
+         the folder named install. The bash script "install_plumed"  inside the folder "install" needs to be run in
+         order to install the plumed successfully. The command used would be simply : bash install_plumed  
          
          
          
@@ -114,13 +75,6 @@ Step-3 : The step 3 requires some additional softwares to be install which inclu
 
 
 
-
-
-############  STEPS  ###########
-############  STEPS  ###########
-############  STEPS  ###########
-############  STEPS  ###########
-############  STEPS  ###########
 
 
 

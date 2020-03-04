@@ -68,20 +68,58 @@ This folder contains the following:
 
 
 
-############  NOTE  ###########
-############  NOTE  ###########
-############  NOTE  ###########
-############  NOTE  ###########
-############  NOTE  ###########
+############  STEPS  ###########
+############  STEPS  ###########
+############  STEPS  ###########
+############  STEPS  ###########
+############  STEPS  ###########
 
-For running the the two tutorials 1) tutorial_1  and  2) tutorial_2 , there is a README made available in these folders.
 
-############  NOTE  ###########
-############  NOTE  ###########
-############  NOTE  ###########
-############  NOTE  ###########
-############  NOTE  ###########
 
+
+STEP-1 : The first step that one needs to perform is to Install the plumed. Along with a plumed version one would
+         also require a suitable and compatible openmpi version for the successful inatallation of plumed. Tar-file
+         for the suitable version of both these (openmpi-1.8.8.tar.gz  and plumed-2.1.3.tgz) are made available in
+         this current folder. The bash script "install_plumed" needs to be run in order to install the plumed
+         successfully. This will create a folder named install_plumed_with_gnap.
+         The command used would be simply : bash install_plumed  
+         
+         
+         
+         
+Step-2 : After the installation is done successfully, it would be advisable to first go for tutorial_1. Here the
+         test trajectory , the reference structure and all the various other input files are made available. One
+         can directly go into the folder "tutorial_1" through terminal , after installation , and  staright-away
+         run the bash script "GNAP.sh" (command : bash GNAP.sh) . This would generate the GNAP values for the test
+         system provided which is a short test trajectory that has 1000 frames of GB1 protein system with 16 
+         residues having a total of 136 particles. The time-series of the GNAP values for the given trajectory
+         would be saved in a file called "COLVAR" .  There is a separate README file made available inside the
+         folder "tutorial_1" which mentions and expalins all the available files inside this folder and the 
+         necessary actions to be performed. 
+         
+         
+         
+         
+Step-3 : The step 3 requires some additional softwares to be install which include Gromacs, Python, BLAS & LAPACK.
+         Once it is ensured that these things are available us in hand, we can straight-away go for tutorial_2,
+         after the installation in the 1st step is acheived. In other words, one can skip the step-2 if Gromacs,
+         Python, BLAS & LAPACK are already available in our system. Here again the same test system is provided
+         which includes the short trajectory "1000frames.xtc" and its refrence strutcure "start.pdb". Ensuring
+         the availability of these softwares, the user can also perform the calculation of GNAP for any other system
+         providing its trajectory and reference structure and changing their names (which are originally 
+         1000frames.xtc and start.pdb) in the file "run.csh" inside the folder "tutorial_2". Also, one needs to 
+         update the no. of particles in the files "myhead.h" (line "#define NP 136") and "plumed.dat" ( line
+         "GNAP LABEL=gnap ATOMS=1-136..."). For the test system, the number of particle is 136. There is a 
+         separate README file made available inside the folder "tutorial_1" which mentions and expalins all
+         the available files inside this folder and the necessary actions to be performed.
+
+
+
+############  STEPS  ###########
+############  STEPS  ###########
+############  STEPS  ###########
+############  STEPS  ###########
+############  STEPS  ###########
 
 
 

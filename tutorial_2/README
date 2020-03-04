@@ -9,7 +9,7 @@ This folder 'Tutorial_1' (for trial with all the input files like PMATRIX1.dat ,
 ref1.gro and neighborhood1.dat) contains the following : 
 
 1) 1000frames.xtc is a short test trajectory that has 1000 frames of GB1 protein system with 16 residues 
-   and 136 particles.
+    having a total of 136 particles. 
 
 2) myhead.h it stiores some important constants like in our case at hand 'NP' which the number of particles 
    in the system we are dealing with. In the test system provided the NP = 136.

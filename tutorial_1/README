@@ -7,7 +7,7 @@
 
 This folder 'Tutorial_1' (for trial with all the input files like PMATRIX1.dat , population_neigh1.dat , ref1.gro and neighborhood1.dat) contains the following : 
 
-1) 1000frames.xtc is a short test trajectory that has 1000 frames of GB1 protein system with 16 residues and 136 particles.
+1) 1000frames.xtc is a short test trajectory that has 1000 frames of GB1 protein system with 16 residues having a total of 136 particles. 
 
 2) GNAP.sh contains the plumed command ( '/plumed driver --mf_xtc 1000frames.xtc --plumed plumed.dat' ) to  run the plumed for generating GNAP values for the given test trajectory.
 

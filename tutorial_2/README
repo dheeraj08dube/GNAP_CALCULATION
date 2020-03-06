@@ -77,7 +77,11 @@ ref1.gro and neighborhood1.dat) contains the following :
 a) run.csh : "Gromacs" is required to generate ref.gro and ref.pdb from start.pdb. 
 
 b) run.csh : "python" is required to extract the xyz coordinates and pbc-box from ref.pdb into a
-   file named "xyz.dat".
+   file named "xyz.dat", which can be obtained from the link :https://www.anaconda.com/distribution/ 
+   Alongwith python, one would also require biopythona and parmed libraries,
+   which one can install from the following links :
+   https://anaconda.org/anaconda/biopython
+   https://anaconda.org/conda-forge/parmed
 
 c) pmat.c  : running this program requires "lapack" and "blas" packages to be installed in the system 
    to perform  some linear algebraic operations involved in the calculation of the projection matrix P 

@@ -21,7 +21,7 @@ rm neighbourhood.dat
 rm for_deri.dat
 rm population_neigh.dat
 rm PMATRIX.dat
-gcc pmat.c -Ddsyev=dsyev_ -lm -llapack -lblas
+gcc pmat.c -Ddsyev=dsyev_ -lm -llapack -lblas -lgfortran
 ./a.out
 
 rm COLVAR
